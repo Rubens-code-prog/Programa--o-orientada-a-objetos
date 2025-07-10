@@ -42,5 +42,30 @@ class circle:
 
 c1 = circle()
 c2 = circle(2)
-print(c1.retorna_raio())
-print(c2.retorna_raio())
+# print(c1.retorna_raio())
+# print(c2.retorna_raio())
+
+#HERANÇA
+class animal():
+    def __init__(self):
+        print("animal criado")
+
+    def quem_sou_eu(self):
+        print('eu sou um animal')
+    
+    def comer(self):
+        print('comendo')
+
+class cachorro(animal):
+    def __init__(self):
+        animal.__init__()
+        print('eu sou um cachorro')
+
+    def quem_sou_eu(self):
+        print('eu sou um cachorro')
+
+animal = animal()
+animal.quem_sou_eu()
+
+dog = cachorro()
+dog.quem_sou_eu()
